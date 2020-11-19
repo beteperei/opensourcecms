@@ -16,14 +16,16 @@ import static org.junit.Assert.assertTrue;
 public class AddNewPages extends BaseCapabilities {
 
     @When("user clicks Pages button")
-    public void user_clicks_pages_button(){ driver.findElement(By.id("menu-pages")).click(); }
+    public void user_clicks_pages_button() {
+        driver.findElement(By.id("menu-pages")).click();
+    }
 
     @Then("The page is created successfully")
     public void the_page_is_created_successfully() throws IOException {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         assertTrue(driver.findElement(By.xpath("//*[text()='Page published.']")).isDisplayed());
-        File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(screenshot,new File("D:\\Udemy\\opensourcecms\\evidences\\addnewpage.png"));
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshot, new File("D:\\Udemy\\opensourcecms\\evidences\\addnewpage.png"));
     }
 
 

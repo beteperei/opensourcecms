@@ -8,7 +8,7 @@ public class BaseCapabilities {
 
     public static WebDriver driver;
 
-    public static WebDriver Capabilities()  {
+    public static WebDriver Capabilities() {
         WebDriver driver = new ChromeDriver();
         String URL = "https://s1.demo.opensourcecms.com/wordpress/wp-login.php";
         driver.get(URL);
