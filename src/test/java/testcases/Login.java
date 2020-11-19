@@ -1,6 +1,5 @@
 package testcases;
 
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,17 +7,14 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import java.net.MalformedURLException;
-
 import static org.junit.Assert.assertEquals;
 
 
 public class Login extends BaseCapabilities {
 
        @Given("user is in the login page")
-       public void loadPage() throws MalformedURLException {
+       public void loadPage() {
            driver = Capabilities();
-
        }
 
        @When("user enters valid username {string}")
